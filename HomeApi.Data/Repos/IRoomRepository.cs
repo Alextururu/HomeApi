@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using HomeApi.Contracts.Models.Rooms;
 using HomeApi.Data.Models;
 
 namespace HomeApi.Data.Repos
@@ -10,5 +11,9 @@ namespace HomeApi.Data.Repos
     {
         Task<Room> GetRoomByName(string name);
         Task AddRoom(Room room);
+
+        Task<Room> GetRoomById(string id);
+
+        Task UpdateRoom(Room room, EditRoomRequest request);
     }
 }

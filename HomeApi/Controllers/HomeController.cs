@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using HomeApi.Configuration;
+using HomeApi.Contracts.Models.Devices;
 using HomeApi.Contracts.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System;
+using System.Threading.Tasks;
 
 namespace HomeApi.Controllers
 {
@@ -32,5 +35,7 @@ namespace HomeApi.Controllers
             // Вернём ответ
             return StatusCode(200, infoResponse);
         }
+
+        
     }
 }
